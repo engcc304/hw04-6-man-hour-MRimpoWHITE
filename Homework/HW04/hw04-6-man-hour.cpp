@@ -3,11 +3,11 @@
     (ผลลัพธ์ของ Salary จะต้องอยู่ในรูปแบบ Decimal Number เท่านั้น เช่น 374,000)
 
     Test case:
-        Input the Employees ID(Max. 10 chars): 
+        Input the Employees ID(Max. 10 chars):
             0342
-        Input the working hrs: 
+        Input the working hrs:
             8
-        Salary amount/hr: 
+        Salary amount/hr:
             15000
     Output:
         Expected Output:
@@ -15,11 +15,11 @@
         Salary = U$ 120,000.00
 
     Test case:
-        Input the Employees ID(Max. 10 chars): 
+        Input the Employees ID(Max. 10 chars):
             0000500349
-        Input the working hrs: 
+        Input the working hrs:
             11
-        Salary amount/hr: 
+        Salary amount/hr:
             34000
     Output:
         Expected Output:
@@ -27,32 +27,31 @@
         Salary = U$ 374,000.00
 */
 
+#include <stdio.h>
+#include <locale.h>
 
-#include<stdio.h>
-#include<locale.h>
-
-int main(){
-
+int main()
+{
+    int i;
     char Eidstr[11];
-    float WorkHr , S;
+    float WorkHr, S;
 
     printf("Input the Employees ID(Max. 10 chars): \n");
     scanf("%10s", Eidstr);
 
     printf("Input the working hrs: \n");
-    scanf("%f" , &WorkHr);
+    scanf("%f", &WorkHr);
 
     printf("Salary amount/hr: \n");
-    scanf("%f" , &S);
+    scanf("%f", &S);
 
-    float salary = WorkHr * S ;
+    float salary = WorkHr * S;
 
     printf("Expected Output:\n");
     printf("Employees ID = %s\n", Eidstr);
-    setlocale(LC_NUMERIC, "");
+    // setlocale(LC_NUMERIC, "");
+    setlocale(LC_ALL, "");
     printf("Salary = U$ %'0.2f", salary);
 
-    return 0 ;
+    return 0;
 }
-
-
