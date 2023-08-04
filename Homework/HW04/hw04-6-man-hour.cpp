@@ -36,7 +36,7 @@
 //     float WorkHr , S;
 
 //     printf("Input the Employees ID(Max. 10 chars): \n");
-//     scanf("%3d", &Eid);
+//     scanf("%d", &Eid);
 
 //     printf("Input the working hrs: \n");
 //     scanf("%f" , &WorkHr);
@@ -45,8 +45,8 @@
 //     scanf("%f" , &S);
 
 //     printf("Expected Output:\n");
-//     printf("Employees ID = %3d\n", Eid);
-//     printf("Salary = U$ %0.2f", WorkHr * S);
+//     printf("Employees ID = %d\n", Eid);
+//     printf("Salary = U$ %'.2f", WorkHr * S);
 
 //     return 0 ;
 // }
@@ -120,11 +120,13 @@
 
 
 #include <stdio.h>
+#include <locale.h>
 
 // Function to add commas to the salary amount for better readability
 void formatSalaryWithCommas(float salary, char *formattedSalary) {
+    setlocale(LC_NUMERIC, ""); // Enable locale-specific formatting
     sprintf(formattedSalary, "%'.2f", salary);
-}
+}//ทำให้ราคาใส่ลูกน้ำเอง
 
 int main() {
     int Eid;
@@ -138,7 +140,7 @@ int main() {
     }
     // Clear the input buffer to consume any extra characters, including the newline
     int c;
-    while ((c = getchar()) != '\n' && c != EOF);
+    while ((c = getchar()) != '\n' && c != EOF);//ให้ใส่เลขเกิน 10 ก็โชว์แค่ 10 และไม่ติด error
 
     printf("Input the working hrs: \n");
     if (scanf("%f", &WorkHr) != 1) {
@@ -153,7 +155,7 @@ int main() {
     }
 
     float salary = WorkHr * S;
-    formatSalaryWithCommas(salary, formattedSalary);
+    formatSalaryWithCommas(salary, formattedSalary);//นำเข้า ทำให้ราคาใส่ลูกน้ำเอง
 
     printf("Expected Output:\n");
     printf("Employees ID = %d\n", Eid);
@@ -161,3 +163,5 @@ int main() {
 
     return 0;
 }
+
+

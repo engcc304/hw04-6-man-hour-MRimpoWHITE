@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 
 int main(){
@@ -6,7 +7,7 @@ int main(){
     float WorkHr , S;
 
     printf("Input the Employees ID(Max. 10 chars): \n");
-    scanf("%3d", &Eid);
+    scanf("%d", &Eid);
 
     printf("Input the working hrs: \n");
     scanf("%f" , &WorkHr);
@@ -15,8 +16,8 @@ int main(){
     scanf("%f" , &S);
 
     printf("Expected Output:\n");
-    printf("Employees ID = %3d\n", Eid);
-    printf("Salary = U$ %0.2f", WorkHr * S);
+    printf("Employees ID = %d\n", Eid);
+    printf("Salary = U$ %'.2f", WorkHr * S);
 
     return 0 ;
 }
