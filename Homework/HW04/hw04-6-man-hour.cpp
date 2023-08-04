@@ -133,7 +133,7 @@ int main() {
     float WorkHr, S;
     char formattedSalary[20];
 
-    printf("Input the Employees ID (Max. 10 digits): \n");
+    printf("Input the Employees ID (Max. 10 chars): \n");
     if (scanf("%10d", &Eid) != 1) {
         printf("Invalid input for Employees ID.\n");
         return 1;
