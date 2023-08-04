@@ -29,14 +29,23 @@
 
 
 #include<stdio.h>
+#include <locale.h>
+
+// Function to add commas to the salary amount for better readability
+void formatSalaryWithCommas(float salary, char *formattedSalary) {
+    setlocale(LC_NUMERIC, ""); // Enable locale-specific formatting
+    sprintf(formattedSalary, "%'.2f", salary);
+}//ทำให้ราคาใส่ลูกน้ำเอง
+
 
 int main(){
 
-    int Eid ;
+    char Eidstr[11];
     float WorkHr , S;
+    char formattedSalary[20];
 
     printf("Input the Employees ID(Max. 10 chars): \n");
-    scanf("%d", &Eid);
+    scanf("%10s", Eidstr);
 
     printf("Input the working hrs: \n");
     scanf("%f" , &WorkHr);
@@ -44,9 +53,12 @@ int main(){
     printf("Salary amount/hr: \n");
     scanf("%f" , &S);
 
+    float salary = WorkHr * S ;
+    formatSalaryWithCommas(salary, formattedSalary);
+
     printf("Expected Output:\n");
-    printf("Employees ID = %d\n", Eid);
-    printf("Salary = U$ %0.2f", WorkHr * S);
+    printf("Employees ID = %s\n", Eidstr);
+    printf("Salary = U$ %s", formattedSalary);
 
     return 0 ;
 }
