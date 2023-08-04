@@ -53,15 +53,15 @@ int main()
     setlocale(LC_ALL, "");
 
 
-    if( WorkHr == 11){
-        printf("Salary = U$ 374,000.00");
-    }else{
-        printf("Salary = U$ 120,000.00");
-    }
+    // if( WorkHr == 11){
+    //     printf("Salary = U$ 374,000.00");
+    // }else{
+    //     printf("Salary = U$ 120,000.00");
+    // }
 
 
 
-    // printf("Salary = U$ %'0.2f", salary);
+    printf("Salary = U$ %'0.2f", salary);
 
     return 0;
 }
