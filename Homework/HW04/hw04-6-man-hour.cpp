@@ -30,12 +30,13 @@
 #include <stdio.h>
 #include <locale.h>
 
-int main(void)
+int main()
 {
     int i;
     char Eidstr[11];
     float WorkHr, S;
-
+    setlocale(LC_NUMERIC, "");
+    
     printf("Input the Employees ID(Max. 10 chars): \n");
     scanf("%10s", Eidstr);
 
@@ -49,8 +50,7 @@ int main(void)
 
     printf("Expected Output:\n");
     printf("Employees ID = %s\n", Eidstr);
-    setlocale(LC_NUMERIC, "");
-    setlocale(LC_ALL, "");
+    
 
     // if( WorkHr == 11){
     //     printf("Salary = U$ 374,000.00");
@@ -58,7 +58,7 @@ int main(void)
     //     printf("Salary = U$ 120,000.00");
     // }
 
-    printf("Salary = U$ %'0.2f\n", salary);
+    printf("Salary = U$ %'3.2f\n", salary);
 
     return 0;
 }
