@@ -30,7 +30,7 @@
 #include <stdio.h>
 #include <locale.h>
 
-int main()
+int main(void)
 {
     int i;
     char Eidstr[11];
