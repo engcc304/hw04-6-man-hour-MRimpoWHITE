@@ -49,17 +49,14 @@ int main()
 
     printf("Expected Output:\n");
     printf("Employees ID = %s\n", Eidstr);
-    // setlocale(LC_NUMERIC, "");
+    setlocale(LC_NUMERIC, "");
     setlocale(LC_ALL, "");
-
 
     // if( WorkHr == 11){
     //     printf("Salary = U$ 374,000.00");
     // }else{
     //     printf("Salary = U$ 120,000.00");
     // }
-
-
 
     printf("Salary = U$ %'0.2f", salary);
 
