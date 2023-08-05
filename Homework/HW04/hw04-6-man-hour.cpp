@@ -58,7 +58,7 @@ int main()
     //     printf("Salary = U$ 120,000.00");
     // }
 
-    printf("Salary = U$ %'0.2f", salary);
+    printf("Salary = U$ %'0.2f\n", salary);
 
     return 0;
 }
