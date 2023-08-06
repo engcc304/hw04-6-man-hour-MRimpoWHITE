@@ -34,7 +34,7 @@ int main()
 {
     char Eidstr[11];
     float WorkHr, S;
-    setlocale(LC_NUMERIC, "");
+    // setlocale(LC_NUMERIC, "");
 
     printf("Input the Employees ID(Max. 10 chars): \n");
     scanf("%10s", Eidstr);
@@ -45,7 +45,7 @@ int main()
     printf("Salary amount/hr: \n");
     scanf("%f", &S);
 
-    int salary = WorkHr * S;
+    float salary = WorkHr * S;
 
     printf("Expected Output:\n");
     printf("Employees ID = %s\n", Eidstr);
@@ -57,10 +57,14 @@ int main()
     //     printf("Salary = U$ 120,000.00");
     // }
 
-    printf("Salary = U$ %'d.00\n", salary);
+    printf("Salary = U$ %'0.2f\n", salary);
 
     return 0;
 }
+
+
+
+
 
 
 
