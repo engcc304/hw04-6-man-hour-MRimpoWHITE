@@ -34,7 +34,7 @@ int main()
 {
     char Eidstr[11];
     float WorkHr, S;
-    setlocale(LC_NUMERIC, "");
+    // setlocale(LC_NUMERIC, "");
 
     printf("Input the Employees ID(Max. 10 chars): \n");
     scanf("%10s", Eidstr);
